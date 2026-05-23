@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronForge Gym — About Us</title>
+  <!-- Requirement: External CSS file -->
+  <link rel="stylesheet" href="css/ironforge.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ── NAVBAR: Logo mini pic + Company Name + Nav Bar ── -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <div class="navbar-logo">IF</div>
+        <span class="navbar-name">IRON<span>FORGE</span></span>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">About Us</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="creativity.html">Programs</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ══════════════════════════════════════
+           WIREFRAME ROW 1: About Us
+           Left block  — image + "ABOUT US" label
+           Right block — mission description
+      ══════════════════════════════════════ -->
+      <section class="section">
+        <div class="container">
+
+          <div class="about-section">
+
+            <!-- Left: image + label -->
+            <div class="about-image-col">
+              <img
+                src="images/photo-1534438327276-14e5300c3a48.jpg"
+                alt="IronForge Gym interior"
+              />
+              <p class="about-image-label">ABOUT US</p>
+            </div>
+
+            <!-- Right: mission description -->
+            <div class="about-text-col">
+              <h2>Our Mission</h2>
+              <p>
+                IronForge Gym was founded by competitive athletes who were tired of gyms
+                that catered to everyone and truly served no one. We built the space we
+                always wanted — raw, honest, and obsessively well-equipped.
+              </p>
+              <p>
+                Our mission is simple: create an environment where serious athletes and
+                complete beginners share the same floor and lift each other up — literally
+                and figuratively.
+              </p>
+              <ul>
+                <li>Intensity over image</li>
+                <li>Community above competition</li>
+                <li>Progress, not perfection</li>
+                <li>Built to last, not to impress</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           WIREFRAME ROW 2: Three Program Cards
+           Card 1 — ONE program + membership
+           Card 2 — ONE program + membership
+           Card 3 — Both options + membership cost
+      ══════════════════════════════════════ -->
+      <section class="section section-dark">
+        <div class="container">
+
+          <div class="programs-row">
+
+            <!-- Card 1: Strength & Powerlifting -->
+            <div class="program-card">
+              <h3>&#127947; Strength &amp; Powerlifting</h3>
+              <p>
+                Barbell training built around the squat, bench, and deadlift.
+                Coached progressive overload and competition prep for all levels.
+              </p>
+              <ul>
+                <li>&#10003; Open rack access 5AM &ndash; 11PM</li>
+                <li>&#10003; Form check sessions</li>
+                <li>&#10003; Monthly max-out days</li>
+                <li>&#10003; Coach supervision daily</li>
+              </ul>
+              <div class="membership-badge">$49 <span>/ month</span></div>
+            </div>
+
+            <!-- Card 2: HIIT & Conditioning -->
+            <div class="program-card">
+              <h3>&#128293; HIIT &amp; Conditioning</h3>
+              <p>
+                45-minute high-intensity interval classes combining metabolic
+                conditioning, functional movement, and sport-specific drills.
+              </p>
+              <ul>
+                <li>&#10003; 12 classes per week</li>
+                <li>&#10003; Heart-rate tracking</li>
+                <li>&#10003; Nutrition guidance included</li>
+                <li>&#10003; No two sessions the same</li>
+              </ul>
+              <div class="membership-badge">$39 <span>/ month</span></div>
+            </div>
+
+            <!-- Card 3: Both options + combined pricing -->
+            <div class="program-card card-highlight">
+              <h3>&#128081; Elite All-Access</h3>
+              <p>
+                All programs. All classes. All coaching. One flat rate &mdash;
+                strength, HIIT, and a monthly 1-on-1 check-in with a coach.
+              </p>
+              <ul>
+                <li>&#10003; Strength &amp; Powerlifting included</li>
+                <li>&#10003; HIIT &amp; Conditioning included</li>
+                <li>&#10003; 2 guest passes per month</li>
+                <li>&#10003; Priority class booking</li>
+              </ul>
+              <div class="membership-badge gold">$119 <span>/ month &mdash; Best Value</span></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══════════════════════════════════════
+         WIREFRAME FOOTER:
+         Social media left — Copyright & email right
+    ══════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="Instagram">&#128248;</a>
+            <a href="#" class="social-icon" aria-label="Twitter / X">&#120143;</a>
+            <a href="#" class="social-icon" aria-label="YouTube">&#9654;</a>
+            <a href="#" class="social-icon" aria-label="TikTok">&#9835;</a>
+          </div>
+          <p class="footer-copy">&copy; 2026 IronForge Gym. All rights reserved.</p>
+          <div class="footer-contact">
+            <p>123 Iron Way, Brooklyn, NY 11201</p>
+            <a href="mailto:info@ironforge.gym">info@ironforge.gym</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script>
+    'use strict';
+    (function navbarScroll() {
+      const navbar = document.querySelector('.navbar');
+      if (!navbar) return;
+      window.addEventListener('scroll', () => {
+        navbar.style.boxShadow = window.scrollY > 40 ? '0 4px 20px rgba(0,0,0,0.5)' : 'none';
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

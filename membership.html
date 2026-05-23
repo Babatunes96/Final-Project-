@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronForge Gym — Membership Registration</title>
+  <!-- Requirement: External CSS file -->
+  <link rel="stylesheet" href="css/ironforge.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ── NAVBAR: Logo + Company Name + Nav Bar ── -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <div class="navbar-logo">IF</div>
+        <span class="navbar-name">IRON<span>FORGE</span></span>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="membership.html" class="active">Membership</a></li>
+        <li><a href="creativity.html">Programs</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ── PAGE HEADER ── -->
+      <section class="reg-header">
+        <div class="container">
+          <p class="section-label">Sign Up Today</p>
+          <h1 class="section-title">MEMBERSHIP <span class="accent">REGISTRATION</span></h1>
+          <div class="divider"></div>
+          <p class="reg-sub">Join the IronForge community. Fill out the form below to claim your membership and start training.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           WIREFRAME ROW 1:
+           Left col  — What members bring / attire info
+           Center    — Membership signup form
+           Right col — Short & long term benefits
+      ══════════════════════════════════════════════ -->
+      <section class="section">
+        <div class="container">
+          <div class="reg-layout">
+
+            <!-- LEFT: What to bring / gym attire -->
+            <aside class="reg-sidebar">
+              <h3 class="sidebar-title">WHAT TO BRING</h3>
+              <ul class="attire-list">
+                <li>
+                  <span class="att-icon">&#128099;</span>
+                  <div>
+                    <strong>Athletic Footwear</strong>
+                    <p>Closed-toe shoes required on the main floor. Lifting shoes recommended in the strength zone.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="att-icon">&#129395;</span>
+                  <div>
+                    <strong>Gym Attire</strong>
+                    <p>Shorts, leggings, or sweatpants. No jeans, belts, or restrictive clothing on equipment.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="att-icon">&#129532;</span>
+                  <div>
+                    <strong>Personal Items</strong>
+                    <p>Bring your own towel and water bottle. Lockers available — bring your own lock.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="att-icon">&#128683;</span>
+                  <div>
+                    <strong>Leave At Home</strong>
+                    <p>No perfume/cologne, outside food, or open-toed shoes on the gym floor.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Benefits — short & long term -->
+              <h3 class="sidebar-title" style="margin-top:2rem;">SHORT-TERM BENEFITS</h3>
+              <ul class="benefit-list">
+                <li>&#10003; Immediate full floor access</li>
+                <li>&#10003; Free onboarding session with a coach</li>
+                <li>&#10003; Access to all group classes</li>
+                <li>&#10003; No enrollment fee first month</li>
+              </ul>
+              <h3 class="sidebar-title" style="margin-top:1.5rem;">LONG-TERM BENEFITS</h3>
+              <ul class="benefit-list">
+                <li>&#10003; Member pricing on personal training</li>
+                <li>&#10003; Quarterly fitness assessments</li>
+                <li>&#10003; Priority booking for specialty events</li>
+                <li>&#10003; Loyalty discounts after 12 months</li>
+                <li>&#10003; Guest passes (Elite plan)</li>
+              </ul>
+            </aside>
+
+            <!-- CENTER: Membership signup form -->
+            <div class="reg-form-col">
+              <div class="form-container">
+                <h2 class="form-heading">Create Your Account</h2>
+
+                <form id="registrationForm" novalidate>
+
+                  <!-- Full Name + Email -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="fullName">Full Name *</label>
+                      <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Jane Smith" />
+                      <span class="form-error" id="fullNameError">Please enter your full name.</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email Address *</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" />
+                      <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                    </div>
+                  </div>
+
+                  <!-- Phone + Age -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="phone">Phone Number *</label>
+                      <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" />
+                      <span class="form-error" id="phoneError">Enter a valid 10-digit phone number.</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="age">Age *</label>
+                      <input type="number" id="age" name="age" class="form-control" placeholder="e.g. 25" min="16" max="90" />
+                      <span class="form-error" id="ageError">Age must be between 16 and 90.</span>
+                    </div>
+                  </div>
+
+                  <!-- Membership Type select -->
+                  <div class="form-group">
+                    <label class="form-label" for="membershipType">Membership Type *</label>
+                    <select id="membershipType" name="membershipType" class="form-control">
+                      <option value="">&#8212; Select a plan &#8212;</option>
+                      <option value="basic">Basic &#8212; $29/month (gym access only)</option>
+                      <option value="strength">Strength Add-On &#8212; $49/month</option>
+                      <option value="hiit">HIIT Add-On &#8212; $39/month</option>
+                      <option value="elite">Elite All-Access &#8212; $119/month</option>
+                    </select>
+                    <span class="form-error" id="membershipTypeError">Please select a membership plan.</span>
+                  </div>
+
+                  <!-- Fitness Goals textarea -->
+                  <div class="form-group">
+                    <label class="form-label" for="fitnessGoals">Fitness Goals *</label>
+                    <textarea id="fitnessGoals" name="fitnessGoals" class="form-control"
+                      placeholder="Tell us what you're working toward &#8212; strength gains, weight loss, endurance, competition prep..."></textarea>
+                    <span class="form-error" id="fitnessGoalsError">Please describe your fitness goals (min. 10 characters).</span>
+                  </div>
+
+                  <!-- Emergency Contact + Phone -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="emergencyContact">Emergency Contact Name *</label>
+                      <input type="text" id="emergencyContact" name="emergencyContact" class="form-control" placeholder="Contact name" />
+                      <span class="form-error" id="emergencyContactError">Please enter an emergency contact name.</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="emergencyPhone">Emergency Contact Phone *</label>
+                      <input type="tel" id="emergencyPhone" name="emergencyPhone" class="form-control" placeholder="(555) 000-0000" />
+                      <span class="form-error" id="emergencyPhoneError">Enter a valid 10-digit phone number.</span>
+                    </div>
+                  </div>
+
+                  <!-- Terms checkbox -->
+                  <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="agreeTerms" name="agreeTerms" />
+                      <span class="checkbox-custom"></span>
+                      I agree to the IronForge
+                      <a href="#" class="accent-link">Terms &amp; Conditions</a> and
+                      <a href="#" class="accent-link">Liability Waiver</a>
+                    </label>
+                    <span class="form-error" id="agreeTermsError">You must agree to the terms to continue.</span>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;padding:1.1rem;">
+                    SUBMIT APPLICATION
+                  </button>
+
+                  <!-- Error summary (populated by JS) -->
+                  <div id="errorSummary" class="error-summary" aria-live="polite"></div>
+
+                </form>
+
+                <!-- Success message (shown after valid submit) -->
+                <div class="form-success" id="successMsg">
+                  <h3>&#127947; Welcome to IronForge!</h3>
+                  <p>Your application has been received. We'll email your confirmation within 24 hours.</p>
+                </div>
+
+              </div><!-- /.form-container -->
+            </div><!-- /.reg-form-col -->
+
+          </div><!-- /.reg-layout -->
+        </div><!-- /.container -->
+      </section>
+
+    </main>
+
+    <!-- ── FOOTER: Social media left — Copyright & email right ── -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="Instagram">&#128248;</a>
+            <a href="#" class="social-icon" aria-label="Twitter / X">&#120143;</a>
+            <a href="#" class="social-icon" aria-label="YouTube">&#9654;</a>
+            <a href="#" class="social-icon" aria-label="TikTok">&#9835;</a>
+          </div>
+          <p class="footer-copy">&copy; 2026 IronForge Gym. All rights reserved.</p>
+          <div class="footer-contact">
+            <p>123 Iron Way, Brooklyn, NY 11201</p>
+            <a href="mailto:info@ironforge.gym">info@ironforge.gym</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script>
+    'use strict';
+
+    // ── Navbar scroll shadow ──
+    (function navbarScroll() {
+      const navbar = document.querySelector('.navbar');
+      if (!navbar) return;
+      window.addEventListener('scroll', () => {
+        navbar.style.boxShadow = window.scrollY > 40 ? '0 4px 20px rgba(0,0,0,0.5)' : 'none';
+      }, { passive: true });
+    })();
+
+    // ── Utility ──
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    // ============================================================
+    // FORM VALIDATION
+    // Demonstrates: Variables, Arrays, Functions, Selection,
+    //               Loops, DOM Manipulation, Event Handling
+    // ============================================================
+
+    // ── Variables ──
+    const form          = document.getElementById('registrationForm');
+    const successMsg    = document.getElementById('successMsg');
+    const errorSummaryEl = document.getElementById('errorSummary');
+
+    // ── Arrays — field configurations for validation loop ──
+    const fieldRules = [
+      {
+        id: 'fullName', errorId: 'fullNameError', label: 'Full Name',
+        validate: (val) => val.trim().length >= 2,
+        message: 'Please enter your full name (at least 2 characters).'
+      },
+      {
+        id: 'email', errorId: 'emailError', label: 'Email Address',
+        validate: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()),
+        message: 'Please enter a valid email address (e.g. user@example.com).'
+      },
+      {
+        id: 'phone', errorId: 'phoneError', label: 'Phone Number',
+        validate: (val) => val.trim().replace(/\D/g, '').length >= 10,
+        message: 'Enter a valid phone number with at least 10 digits.'
+      },
+      {
+        id: 'age', errorId: 'ageError', label: 'Age',
+        validate: (val) => { const n = parseInt(val, 10); return !isNaN(n) && n >= 16 && n <= 90; },
+        message: 'Age must be a number between 16 and 90.'
+      },
+      {
+        id: 'membershipType', errorId: 'membershipTypeError', label: 'Membership Type',
+        validate: (val) => val !== '',
+        message: 'Please select a membership plan.'
+      },
+      {
+        id: 'fitnessGoals', errorId: 'fitnessGoalsError', label: 'Fitness Goals',
+        validate: (val) => val.trim().length >= 10,
+        message: 'Please describe your fitness goals (at least 10 characters).'
+      },
+      {
+        id: 'emergencyContact', errorId: 'emergencyContactError', label: 'Emergency Contact Name',
+        validate: (val) => val.trim().length >= 2,
+        message: 'Please enter an emergency contact name.'
+      },
+      {
+        id: 'emergencyPhone', errorId: 'emergencyPhoneError', label: 'Emergency Contact Phone',
+        validate: (val) => val.trim().replace(/\D/g, '').length >= 10,
+        message: 'Enter a valid emergency contact phone number (at least 10 digits).'
+      }
+    ];
+
+    // ── Function: clear a single field error ──
+    function clearFieldError(fieldId, errorId) {
+      const field   = document.getElementById(fieldId);
+      const errorEl = document.getElementById(errorId);
+      if (field)   field.classList.remove('error');
+      if (errorEl) errorEl.classList.remove('visible');
+    }
+
+    // ── Function: show a single field error ──
+    function showFieldError(fieldId, errorId, message) {
+      const field   = document.getElementById(fieldId);
+      const errorEl = document.getElementById(errorId);
+      if (field)   field.classList.add('error');
+      if (errorEl) { errorEl.textContent = message; errorEl.classList.add('visible'); }
+    }
+
+    // ── Function: validate all fields using a loop ──
+    function validateAllFields() {
+      let errors = []; // Array to collect all error messages
+
+      // ── Loop through each field rule ──
+      for (let i = 0; i < fieldRules.length; i++) {
+        const rule  = fieldRules[i];
+        const field = document.getElementById(rule.id);
+        if (!field) continue;
+
+        // ── Selection statement (if/else) ──
+        if (!rule.validate(field.value)) {
+          showFieldError(rule.id, rule.errorId, rule.message);
+          errors.push(rule.label + ': ' + rule.message);
+        } else {
+          clearFieldError(rule.id, rule.errorId);
+        }
+      }
+
+      // ── Checkbox validation ──
+      const checkbox     = document.getElementById('agreeTerms');
+      const checkboxError = document.getElementById('agreeTermsError');
+      if (!checkbox.checked) {
+        if (checkboxError) checkboxError.classList.add('visible');
+        errors.push('Terms & Conditions: You must agree to the terms to continue.');
+      } else {
+        if (checkboxError) checkboxError.classList.remove('visible');
+      }
+
+      return errors;
+    }
+
+    // ── Function: render error summary ──
+    function renderErrorSummary(errors) {
+      if (errors.length === 0) {
+        errorSummaryEl.innerHTML = '';
+        errorSummaryEl.classList.remove('visible');
+        return;
+      }
+      let html = '<p><strong>Please fix the following:</strong></p><ul>';
+      // ── Loop: build list from errors array ──
+      for (let i = 0; i < errors.length; i++) {
+        html += '<li>' + errors[i] + '</li>';
+      }
+      html += '</ul>';
+      errorSummaryEl.innerHTML = html;
+      errorSummaryEl.classList.add('visible');
+      errorSummaryEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ── Function: handle form submission ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const errors = validateAllFields();
+
+      // ── Selection statement (if/else) ──
+      if (errors.length > 0) {
+        renderErrorSummary(errors);
+        // ── Loop: scroll to first error field ──
+        for (let i = 0; i < fieldRules.length; i++) {
+          const el = document.getElementById(fieldRules[i].id);
+          if (el && el.classList.contains('error')) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.focus();
+            break;
+          }
+        }
+      } else {
+        errorSummaryEl.innerHTML = '';
+        errorSummaryEl.classList.remove('visible');
+        form.style.display = 'none';
+        successMsg.classList.add('visible');
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // ── Event handling: form submit ──
+    if (form) { form.addEventListener('submit', handleSubmit); }
+
+    // ── Event handling: real-time validation on blur ──
+    // ── Loop: attach listeners to each field ──
+    fieldRules.forEach(function(rule) {
+      const field = document.getElementById(rule.id);
+      if (!field) return;
+      field.addEventListener('blur', function() {
+        // ── Selection statement ──
+        if (!rule.validate(field.value)) {
+          showFieldError(rule.id, rule.errorId, rule.message);
+        } else {
+          clearFieldError(rule.id, rule.errorId);
+        }
+      });
+      field.addEventListener('input', function() {
+        if (rule.validate(field.value)) clearFieldError(rule.id, rule.errorId);
+      });
+    });
+
+    // ── Function: auto-format phone numbers ──
+    function autoFormatPhone(inputId) {
+      const el = document.getElementById(inputId);
+      if (!el) return;
+      el.addEventListener('input', function() {
+        let digits = el.value.replace(/\D/g, '');
+        let formatted = '';
+        // ── Switch statement for formatting ──
+        switch (true) {
+          case digits.length <= 3:
+            formatted = digits; break;
+          case digits.length <= 6:
+            formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3); break;
+          default:
+            formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6,10);
+        }
+        el.value = formatted;
+      });
+    }
+
+    // ── Array of phone fields — loop to attach formatter ──
+    const phoneFields = ['phone', 'emergencyPhone'];
+    for (let i = 0; i < phoneFields.length; i++) {
+      autoFormatPhone(phoneFields[i]);
+    }
+  </script>
+</body>
+</html>
